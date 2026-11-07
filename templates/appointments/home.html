@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Home | Salon Appointments{% endblock %}
+
+{% block content %}
+<div class="page-box">
+    <h1>Salon Appointment Record System</h1>
+    <p>Welcome to the Salon Appointment Record System. Use this application to manage and organize your salon customer appointments easily.</p>
+    <div class="button-group">
+        <a class="button" href="{% url 'appointment_create' %}">Add Appointment</a>
+        <a class="button button-secondary" href="{% url 'appointment_list' %}">View Appointments</a>
+    </div>
+</div>
+{% endblock %}

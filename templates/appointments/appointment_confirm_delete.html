@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Delete Appointment | Salon Appointments{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Delete Appointment</h1>
+    <p>Are you sure you want to delete the appointment for <strong>{{ appointment.customer_name }}</strong>?</p>
+    <form method="post" class="form-actions">
+        {% csrf_token %}
+        <button class="button button-danger" type="submit">Yes, Delete</button>
+        <a class="button button-secondary" href="{% url 'appointment_list' %}">Cancel</a>
+    </form>
+</div>
+{% endblock %}
